@@ -67,3 +67,8 @@ npm install
 # 4. Start the development server
 npm run dev
 ```
+📬 Contact Me
+I am currently open to Internship opportunities in Backend Development.
+Phone: 0794266321
+Email: dat7092006@gmail.com
+LinkedIn: 
