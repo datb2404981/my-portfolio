@@ -1,36 +1,46 @@
-import Marquee from "react-fast-marquee";
-import { FaNodeJs, FaReact, FaDocker, FaGitAlt } from "react-icons/fa";
-import { SiJavascript, SiMysql, SiMongodb, SiPrisma } from "react-icons/si";
+import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Skills = () => {
-  return (
-    <section
-      id="skills"
-      className="py-16 bg-gradient-to-b from-[#0a0a0a] via-[#0b1324] to-[#0a0a0a] relative"
-    >
-      {/* Hiệu ứng ánh sáng nền dịu */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(59,130,246,0.06),transparent_80%)] pointer-events-none"></div>
+    const skills = [
+        {
+            category: "Frontend",
+            technologies: ["React", "Vue", "Next.js", "TailwindCSS"],
+        },
+        {
+            category: "Backend",
+            technologies: ["Node.js", "Python", "Django", "Go"],
+        },
+    ];
 
-      {/* Tiêu đề */}
-      <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent drop-shadow-[0_0_6px_rgba(59,130,246,0.25)] relative z-10">
-        My Skills
-      </h2>
-
-      {/* Dòng icon chạy ngang */}
-      <div className="overflow-hidden relative z-10">
-        <Marquee speed={35} gradient={false}>
-          <div className="flex items-center gap-16 px-6">
-            <FaNodeJs className="text-6xl text-green-500 hover:scale-110 transition-transform" />
-            <SiJavascript className="text-6xl text-yellow-400 hover:scale-110 transition-transform" />
-            <FaReact className="text-6xl text-blue-400 hover:scale-110 transition-transform" />
-            <SiPrisma className="text-6xl text-blue-500 hover:scale-110 transition-transform" />
-            <SiMysql className="text-6xl text-yellow-500 hover:scale-110 transition-transform" />
-            <SiMongodb className="text-6xl text-green-400 hover:scale-110 transition-transform" />
-            <FaDocker className="text-6xl text-blue-600 hover:scale-110 transition-transform" />
-            <FaGitAlt className="text-6xl text-orange-500 hover:scale-110 transition-transform" />
-          </div>
-        </Marquee>
-      </div>
-    </section>
-  );
+    return (
+        <section id="skills" className="min-h-screen flex items-center justify-center py-20 relative">
+            <RevealOnScroll>
+                <div className="max-w-3xl mx-auto px-4 relative">
+                    <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+                        Skills
+                    </h2>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {skills.map((skill, index) => (
+                            <div key={index} className="rounded-xl p-6 border border-white/10 bg-white/5 backdrop-blur-md hover:-translate-y-1 transition-all">
+                                <h3 className="text-xl font-bold mb-4 text-center">{skill.category}</h3>
+                                <div className="flex flex-wrap gap-2 justify-center">
+                                    {skill.technologies.map((tech, key) => (
+                                         <span
+                                            key={key}
+                                            className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
+                                                        hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition
+                                            "
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </RevealOnScroll>
+        </section>
+    );
 };

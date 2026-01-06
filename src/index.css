@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
@@ -9,9 +10,9 @@ html, body {
 }
 
 @layer utilities {
-  /* Hiệu ứng nhấp nháy dấu | */
   @keyframes blink {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
     }
     50% {
@@ -23,7 +24,6 @@ html, body {
     animation: blink 0.8s step-end infinite;
   }
 
-  /* Hiệu ứng thanh loading chạy qua lại */
   @keyframes loading {
     0% {
       transform: translateX(-100%);
@@ -34,6 +34,32 @@ html, body {
   }
 
   .animate-loading-bar {
-    animation: loading 1.8s ease-in-out infinite;
+    animation: loading 0.8s ease-in-out infinite;
   }
+  
+  .bg-grid-white\/5 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(255 255 255 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #fff;
 }
