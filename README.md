@@ -11,7 +11,7 @@ The site features a **Modern Dark UI** with **Glassmorphism** effects, ensuring 
 
 ## 🚀 Live Demo
 
-👉 **Visit my Portfolio here:** [INSERT_YOUR_VERCEL_LINK_HERE]
+👉 **Visit my Portfolio here:** [https://my-portfolio-beta-sable-16.vercel.app](https://my-portfolio-beta-sable-16.vercel.app)
 
 _(e.g., https://my-portfolio.vercel.app)_
 
@@ -67,8 +67,9 @@ npm install
 # 4. Start the development server
 npm run dev
 ```
+
 📬 Contact Me
 I am currently open to Internship opportunities in Backend Development.
 Phone: 0794266321
 Email: dat7092006@gmail.com
-LinkedIn: 
+LinkedIn: [Nguyen Van Dat](https://www.linkedin.com/in/nguyen-van-dat-nguyễn-9280ab377)
